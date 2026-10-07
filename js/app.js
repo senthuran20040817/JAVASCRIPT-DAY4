@@ -1,26 +1,24 @@
-//========================== JAVASCRIPT VARIABLES ==========================
+//========================== CONST IN ARRAYLISTS ==========================
 
-// --- var & let ---
+let customerList = ["senthuran", "bineth" , "isira"];
+console.log(customerList); //prints ["senthuran", "bineth" , "isira"]
 
-{
-    var name = "Senthuran";
-    let age = 22;
-}
+customerList = "kaveesha";
+console.log(customerList); //prints kaveesha
 
-console.log(name);  // prints Senthuran -- var variables can be accessed from any block in the document
-console.log(age); //error - cannot access a inblock let variable outside of that block
+//this is a proble. when using let, customerlist is changing arraylist to string.
+//this is happen by mistake when we code thousands of lines.
 
-//var -- outside of the scope allowed
-//let -- only inside the scope allowed
+//to reduce this mistake, we can use const variables.
 
-//when js code runs the var variable creates a fixed space in the ram which exists through out the program
-//but let variable inside a block only exists when js runs that block, when js gone out of that box, the let variable will  be deleted in the ram
-//which means let variable created in the ram, only works until the js exist on that block.
+const numbers = [1, 2, 3, 4, 5];
+console.log(numbers); //prints [1, 2, 3, 4, 5]
 
-// --- const ---
+numbers = 5; //error -- const variables cannot be re-assigned
 
-const number = 20;
-console.log(number);
+//but pushing to a const assigned variables is allowed , even it is a const variable
 
-const number = 30; //error -- cannot re-assign values to the const declared variables.
-console.log(number);
+const letters = ["a", "b", "c", "d"];
+
+letters.push("e");
+console.log(letters); //prints ["a", "b", "c", "d", "e"]
